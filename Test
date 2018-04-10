@@ -1,1 +1,81 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GRAFYTREE</title>
+	<link rel="stylesheet" href="Stiles/normalize.css">
+	<link rel="stylesheet" href="Stiles/style.css">
+	<link rel="stylesheet" href="plugin/FontAwesome/css/fontawesome-all.css">
+	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Open+Sans+Condensed:300|Tangerine" rel="stylesheet">
+</head>
+<body>
+	<div class="topsection">
+		<h1>GRAFYTREE</h1>
+		<h3>REDEFINING EVENT PHOTOGRAPHY</h3>
+		<div class="brdr"></div>
+		<nav>
+			<ul>
+				<li><a href="#">Wedding</a></li>
+				<li><a href="#">Pre-Wedding</a></li>
+				<li><a href="#">Baby</a></li>
+				<li><a href="#">Birth Day</a></li>
+				<li><a href="#">Book A Session</a></li>
+				<li><a href="#">Our Team</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="row displarack">
+		<div class="col4 overflowHidden imgcenter">
+			<img   src="Content/images/img1.jpg" alt="">
+		</div>
+		<div class="col4 overflowHidden imgcenter">
+			<img   src="Content/images/img2.jpg" alt="">
+		</div>
+		<div class="col4 overflowHidden imgcenter">
+			<img  src="Content/images/img3.jpg" alt="">
+		</div>
+		<div class="col4 overflowHidden imgcenter">
+			<img  src="Content/images/img4.jpg" alt="">
+		</div>
+	</div>
+	<div class="row displarack">
+		<div class="col4 overflowHidden imgcenter">
+			<img  src="Content/images/img5.jpg" alt="">
+		</div>
+		<div class="col4 overflowHidden imgcenter">
+			<img  src="Content/images/img6.jpg" alt="">
+		</div>
+		<div class="col4 overflowHidden imgcenter">
+			<img  src="Content/images/img7.jpg" alt="">
+		</div>
+		<div class="col4 overflowHidden imgcenter">
+			<img  src="Content/images/img8.jpg" alt="">
+		</div>
+	</div>
+	<div class="row displarack">
+		<div class="col4 overflowHidden imgcenter">
+			<img  src="Content/images/img9.jpg" alt="">
+		</div>
+		<div class="col4 overflowHidden imgcenter">
+			<img  src="Content/images/img10.jpg" alt="">
+		</div>
+		<div class="col4 overflowHidden imgcenter">
+			<img  src="Content/images/img11.jpg" alt="">
+		</div>
+		<div class="col4 overflowHidden imgcenter">
+			<img  src="Content/images/img12.jpg" alt="">
+		</div>
+	</div>
+	<div class="footer">
+		<div class="social">
+			<ul>
+				<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+				<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+				<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+			</ul>
+		</div>
+		<div class="copyrt">&copy GrafyTree 2018</div>
+	</div>
+</body>
+</html>
