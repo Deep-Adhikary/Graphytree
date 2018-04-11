@@ -2,6 +2,9 @@ body{
 	background-color: #F7F7F7;
 
 }
+.noScroll{
+	overflow: hidden;
+}
 div.topsection{
 	background-color: #EFEFEF;
 	margin: 0;
@@ -58,6 +61,11 @@ div.row{
 	width: 100%;
 
 }
+div.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 div.displarack img{
 	max-height: 100%;
 	 
@@ -111,6 +119,9 @@ div.footer{
 	bottom: 0;
 	left: 0;
 }
+div.footerAdjustment{
+	margin-bottom: 7em;
+}
 div.social>ul{
 	text-align: center;
 	margin-top:2em;
@@ -136,4 +147,86 @@ div.copyrt{
 	word-spacing: 0.3em;
 	color: #808080;
 	padding-left: 10px;
+}
+div.slideContainer{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width:100%;
+	height: 100%;
+	background-color:#EFEFEF;
+	z-index: -1;
+	opacity: 0;
+	transition: all 0.5s;
+}
+div.slideContainer.show{
+		z-index: 2;
+		opacity: 1
+}
+div.slideContainer.show>.close{
+	z-index: 2;
+}
+/*****************Custom Swiper Slide**************/
+.swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    .swiper-slide img{
+    	max-height: calc(100vh - 100px);
+    	max-width: 100%;
+    }
+
+
+    /************CLOSE BUTTON************/
+.close {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.5s;
+}
+.close:hover {
+  opacity: 1;
+
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 1px;
+  background-color: #3E3E3E;
+  transition: all 0.5s;
+}
+.close:hover::before, .close:hover::after {
+  height: 43px;
+  width: 1px;
+  background-color: #3E3E3E;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
 }
