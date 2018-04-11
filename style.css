@@ -2,6 +2,9 @@ body{
 	background-color: #F7F7F7;
 
 }
+*{
+	box-sizing: border-box;
+}
 .noScroll{
 	overflow: hidden;
 }
@@ -83,6 +86,28 @@ div.col4{
 	margin: 3px 3px;
 	background-color: #F7F7F7;
 
+}
+div.col-2{
+	width: calc((100% - 12px) / 2);
+	float: left;
+	height: 500px;
+	margin: 3px 3px;
+	background-color: #F7F7F7;
+	
+}
+div.col-4{
+	width: calc((100% - 24px) / 4);
+	float: left;
+	height: 250px;
+	margin: 3px 3px;
+	background-color: #F7F7F7;
+	
+}
+div.col-1{
+	width: 100%;
+	margin: 3px 3px;
+	background-color: #F7F7F7;
+	box-sizing: border-box;
 }
 .overflowHidden{
 	overflow:hidden;
@@ -166,6 +191,21 @@ div.slideContainer.show{
 div.slideContainer.show>.close{
 	z-index: 2;
 }
+
+div.container{
+	width: 80%;
+	margin:0 auto;
+	box-sizing: border-box;
+}
+.category{
+	font-family: 'Tangerine', cursive;
+	font-size: 2.5em;
+	text-align: center;
+	font-weight: 300;
+	margin-top:.5em;
+	color: #585858;
+}
+
 /*****************Custom Swiper Slide**************/
 .swiper-container {
       width: 100%;
