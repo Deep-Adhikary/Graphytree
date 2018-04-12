@@ -8,6 +8,16 @@ body{
 .noScroll{
 	overflow: hidden;
 }
+.overflowHidden{
+	overflow:hidden;
+}
+
+div.container{
+	width: 80%;
+	margin:0 auto;
+	box-sizing: border-box;
+}
+/*************Navber Section Styling**************/
 div.topsection{
 	background-color: #EFEFEF;
 	margin: 0;
@@ -34,6 +44,12 @@ div.topsection>h3{
 	padding-top: 0.08em;
 	font-family: 'Open Sans Condensed', sans-serif;
 }
+div.brdr{
+	width: 25%;
+	margin:0 auto;
+	margin-top: 15px;
+	border-top: 1px solid #D6D6D6;
+}
 nav{
 	margin-top: 1.5em;
 }
@@ -56,10 +72,27 @@ nav>ul li>a{
 	border-bottom: 1px solid transparent;
 	transition: all 0.5s;
 }
+nav>ul li>a.selected{
+	color: #040404;
+	border-bottom: 1px solid #797979;
+}
 nav>ul li>a:hover{
 	color: #151515;
-	border-bottom: 1px solid #151515;
+	border-bottom: 1px solid #797979;
 }
+
+/*********************************************/
+/****************Heading Style****************/
+.category{
+	font-family: 'Tangerine', cursive;
+	font-size: 2.5em;
+	text-align: center;
+	font-weight: 300;
+	margin-top:.5em;
+	color: #585858;
+}
+/*********************************************/
+/*****************Layout Home Page************/
 div.row{
 	width: 100%;
 
@@ -69,50 +102,16 @@ div.row::after {
     clear: both;
     display: table;
 }
-div.displarack img{
-	max-height: 100%;
-	 
-}
-div.brdr{
-	width: 25%;
-	margin:0 auto;
-	margin-top: 15px;
-	border-top: 1px solid #D6D6D6;
-}
+
 div.col4{
 	width: calc((100% - 25px) / 4);
 	float: left;
 	height: calc(100vw / 4);
 	margin: 3px 3px;
-	background-color: #F7F7F7;
+	background-color:#4F4F4F;
 
 }
-div.col-2{
-	width: calc((100% - 12px) / 2);
-	float: left;
-	height: 500px;
-	margin: 3px 3px;
-	background-color: #F7F7F7;
-	
-}
-div.col-4{
-	width: calc((100% - 24px) / 4);
-	float: left;
-	height: 250px;
-	margin: 3px 3px;
-	background-color: #F7F7F7;
-	
-}
-div.col-1{
-	width: 100%;
-	margin: 3px 3px;
-	background-color: #F7F7F7;
-	box-sizing: border-box;
-}
-.overflowHidden{
-	overflow:hidden;
 
-}
 div.imgcenter{
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -124,18 +123,144 @@ div.imgcenter{
 	-webkit-align-items: center;
 	align-items: center;
 	 justify-content: center;
+	 height: 100%;
+	 width: 100%;
 }
 div.imgcenter img{
 	flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%;
+    max-height: 100%;
     cursor: pointer;
     opacity: 1;
     transition: opacity 0.5s;
 }
-div.imgcenter img:hover{
-	 opacity: 0.5;
+div.imgcenter.potrait img{
+    max-width: 100%;
+    height: auto;
 }
+div.imgcenter img:hover{
+	 opacity: 0.7;
+}
+/*********************************************/
+/***********Layout Category Page*************/
+div.flexrow{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items:center;
+	width: 100%;
+}
+div.flexrow.storeyWrap{
+	background-color: #FFFFFF;
+	border:1px solid #E5E5E5;
+	margin-bottom: 1.2em;
+	padding: 10px
+	-webkit-box-shadow: -1px 3px 3px -3px rgba(51,51,51,0.67);
+	-moz-box-shadow: -1px 3px 3px -3px rgba(51,51,51,0.67);
+	box-shadow: -1px 3px 3px -3px rgba(51,51,51,0.67);
+}
+div.flexcol{
+	display: flex;
+	
+	align-items: flex-start;
+
+	overflow: hidden;
+	margin: 3px 3px;
+}
+div.container div.flexcol.col-2{
+	width: calc( 100% - 6px);
+	height: calc(( 100vw * .80));
+}
+div.container div.flexcol.col-2{
+	width: calc( 50% - 6px);
+	height: calc(( 100vw * .80) /2);
+}
+div.container div.flexcol.col-3{
+	width: calc( 33.33% - 6px);
+	height: calc(( 100vw * .80) /3);
+}
+div.container div.flexcol.col-4{
+	width: calc( 25% - 6px);
+	height: calc(( 100vw * .80) /4);
+}
+.col-4.span-3{
+	width: calc( 75% - 6px) !important;
+	height: calc(( 100vw * .80) /4)!important;
+}
+div.story{
+	padding:0 0.6em;
+}
+div.storeyWrap img{
+	cursor: default !important;
+}
+div.storeyWrap img:hover{
+	opacity: 1!important;
+}
+div.story .storyheader{
+	font-family: 'Old Standard TT', serif;
+	margin-top:0.4em;
+	font-size: 1.6em;
+	font-weight: 300;
+	text-transform: capitalize;
+	color: #565656;
+}
+div.story .storybody{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.2em;
+	text-align: justify;
+	line-height: 1.4em;
+	color: #4D4D4D;
+}
+div.storyoption{
+	display: block;
+	font-size: 1.2em;
+	position: relative;
+	margin-top:2em;
+}
+div.storyoption span{
+	position: absolute;
+	right: 0;
+}
+.storyoption a{
+	color: #333333;
+	text-decoration: none;
+	padding: 0 0.8em;
+	transition: all 0.5s;
+}
+.storyoption a.view{
+	font-family: 'Open Sans Condensed', sans-serif;
+	padding: 6px 25px;
+	border:1px solid #3D3D3D;
+}
+.storyoption a.view:hover{
+	background-color: #3D3D3D;
+	color: #F0F0F0;
+}
+div.flexcol div.imgcontainer{
+	background-color:#4F4F4F;
+	display: flex;
+	align-items:center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+
+}
+div.imgcontainer img{
+	flex-shrink: 0;
+    height: 100%;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+div.imgcontainer.potrait img{
+	height: auto;
+	width: 100%;
+}
+div.imgcontainer img:hover{
+	opacity: 0.7;
+}
+/*********************************************/
+
+/**************Footer Section*****************/
 div.footer{
 	width: 100%;
 	height: 7em;
@@ -173,6 +298,8 @@ div.copyrt{
 	color: #808080;
 	padding-left: 10px;
 }
+/*****************************************/
+/******Slide Show Settings***************/
 div.slideContainer{
 	position: fixed;
 	top: 0;
@@ -191,20 +318,8 @@ div.slideContainer.show{
 div.slideContainer.show>.close{
 	z-index: 2;
 }
+/*****************************************/
 
-div.container{
-	width: 80%;
-	margin:0 auto;
-	box-sizing: border-box;
-}
-.category{
-	font-family: 'Tangerine', cursive;
-	font-size: 2.5em;
-	text-align: center;
-	font-weight: 300;
-	margin-top:.5em;
-	color: #585858;
-}
 
 /*****************Custom Swiper Slide**************/
 .swiper-container {
@@ -234,8 +349,8 @@ div.container{
     	max-width: 100%;
     }
 
-
-    /************CLOSE BUTTON************/
+/*****************************************/
+/***************CLOSE BUTTON*************/
 .close {
   position: absolute;
   right: 30px;
@@ -270,3 +385,4 @@ div.container{
 .close:after {
   transform: rotate(-45deg);
 }
+/*****************************************/
