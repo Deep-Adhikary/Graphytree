@@ -13,6 +13,8 @@
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
+    effect:'fade',
+    speed:600,
 		loop: false
     })
   	 $('.toslide').click(function(e) {
@@ -27,6 +29,10 @@
   	 	$('.slideContainer').removeClass('show');
   	 	$('body').removeClass('noScroll');
   	 });
+     $.validate({
+      lang: 'en',
+      validateOnBlur:'false'
+    });
   });
 
  
